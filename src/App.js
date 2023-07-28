@@ -1,7 +1,7 @@
 import React from "react"
 
 var H1style = {
-    fontSize: 100,
+    fontSize: 40,
     color: '#61dafb'
 }
 

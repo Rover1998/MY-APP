@@ -1,38 +1,52 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-class WebSite extends React.Component{
+class WebSite extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             name: "baidu",
-            url : "https://www.baidu.com"
+            url: "https://www.baidu.com"
         }
     }
 
     render() {
-        return(
+        return (
             <div>
-                <Name name={this.state.name} />
+                {/* <Name name={this.state.name} /> */}
+                <Name />
                 <Url url={this.state.url} />
             </div>
         );
     }
 }
 
-class Name extends React.Component{
+class Name extends React.Component {
+    // static propTypes = {
+    //     name: PropTypes.string
+    // };
     render() {
-        return(
+        return (
             <h2>name: {this.props.name}</h2>
         );
     }
 }
+Name.defaultProps = {
+    name: 'wangyi'
+}
 
-class Url extends React.Component{
+Name.propTypes = {
+    name: PropTypes.string,
+    name: PropTypes.string.isRequired
+}
+
+class Url extends React.Component {
     render() {
-        return(
+        return (
             <a href={this.props.url}>url: {this.props.url}</a>
         );
     }
 }
+
 
 export default WebSite
