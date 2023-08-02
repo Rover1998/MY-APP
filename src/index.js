@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import State from './State'
 import reportWebVitals from './reportWebVitals';
-import WebSite from './website';
+import WebSite from './Website';
 import EventsResolution from './EventsResolution'
 import PassParamsToListener from './PassParamsToListener'
 import Login from "./condition/Login"
 import MailBox from './MailBox'
 import ListItem from './ListItem'
+import AjaxRequest from './AjaxRequest'
+import Form from './FormUpdate'
+import FlavorForm from './FlavorForm'
+import MultipleForm from './MultipleForm'
 
 // const element = <h1>Hello World!</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -91,6 +95,8 @@ function tick() {
 // }
 
 const numbers = [1, 2, 3, 4, 5];
+// const api = 'http://8.140.205.108:8080/api';
+const api = 'http://localhost:8080/api';
 
 root.render(
   <React.StrictMode>
@@ -102,6 +108,10 @@ root.render(
     <Login />
     <MailBox />
     <ListItem numbers={numbers} />
+    <AjaxRequest url={api} />
+    <Form />
+    <FlavorForm />
+    <MultipleForm />
   </React.StrictMode>
 )
 
