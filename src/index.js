@@ -14,6 +14,7 @@ import AjaxRequest from './AjaxRequest'
 import Form from './FormUpdate'
 import FlavorForm from './FlavorForm'
 import MultipleForm from './MultipleForm'
+import ElementRef from './ElementRef'
 
 // const element = <h1>Hello World!</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -95,8 +96,8 @@ function tick() {
 // }
 
 const numbers = [1, 2, 3, 4, 5];
-// const api = 'http://8.140.205.108:8080/api';
-const api = 'http://localhost:8080/api';
+const api = 'http://8.140.205.108:8080/api';
+// const api = 'http://localhost:8080/api';
 
 root.render(
   <React.StrictMode>
@@ -112,6 +113,7 @@ root.render(
     <Form />
     <FlavorForm />
     <MultipleForm />
+    <ElementRef />
   </React.StrictMode>
 )
 
@@ -119,4 +121,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);
